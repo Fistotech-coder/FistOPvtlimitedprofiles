@@ -1,0 +1,500 @@
+html {
+    color: #000;
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #000;
+    font-family: FSKoopmanVF;
+}
+
+#background {
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+}
+
+.fule-heading-text {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    max-width: 426px;
+    top: 30px;
+    left: 30px;
+}
+
+.fule-heading-text .d {
+    fill: #fff;
+}
+
+.fule-bg-type .d {
+    fill: rgb(0, 0, 0);
+}
+
+.about-contact .d {
+    fill: #fff;
+}
+
+.hand-drawn-lines {
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    margin: auto;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand-drawn-lines img {
+    height: 100%;
+    position: relative;
+    top: -120px;
+    left: 120px;
+    z-index: 100;
+}
+
+.about-contact {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    width: 200px;
+}
+
+@media all and (max-width: 768px) {
+    .about-contact {
+        bottom: 25px;
+        right: 25px;
+    }
+    .fule-heading-text {
+        width: 300px;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    /* scroll-snap-type: y mandatory; */
+}
+
+a {
+    color: #fff;
+}
+
+.project {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 130px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.bg-blur-image {
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.project-image {
+    top: 0px;
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    z-index: 50;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.project-foreground-image {
+    max-width: 800px;
+    max-height: 100%;
+    margin: auto;
+}
+
+@media all and (max-width: 900px) {
+    .project {
+        padding: 80px;
+    }
+    
+    .project-foreground-image {
+        max-width: 100%;
+    }
+}
+
+.post-thumbnail img {
+    max-width: 100%;
+    height: auto;
+}
+
+.featured-image {
+    background-position: top center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.project .attachment-post-thumbnail {
+    width: 100%;
+    z-index: -1;
+}
+
+.corner {
+    position: absolute;
+}
+
+.top-left.corner {
+    top: 20px;
+    left: 20px;
+}
+
+.top-right.corner {
+    right: 20px;
+    top: 20px;
+    transform: rotate(90deg);
+}
+
+.bottom-left.corner {
+    bottom: 20px;
+    left: 20px;
+    transform: rotate(270deg);
+}
+
+.bottom-right.corner {
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(180deg);
+}
+
+.mid-left.corner {
+    top: calc(50% - 27px);
+    left: 20px;
+}
+
+.mid-right.corner {
+    top: calc(50% - 27px);
+    right: 20px;
+    transform: rotate(180deg);
+}
+
+#gui {
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+}
+
+.center {
+    margin: auto;
+    position: relative;
+    width: 10px;
+    height: 10px;
+}
+
+#about-me-link {
+    font-size: 23px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#about-me-link img {
+    width: 35px;
+    margin-left: 20px;
+}
+
+@media all and (max-width: 1000px) {}
+
+@font-face {
+    font-family: Goji-Heavy;
+    font-weight: bold;
+    src: url(fonts/Goji-Heavy.otf);
+}
+
+@font-face {
+    font-family: Gatwick;
+    font-weight: bold;
+    src: url(fonts/Gatwick-Bold.otf);
+}
+
+@font-face {
+    font-family: Gatwick;
+    font-weight: normal;
+    src: url(fonts/Gatwick-Ultralight.otf);
+}
+
+@font-face {
+    font-family: GatwickBold;
+    src: url(fonts/Gatwick-Bold.otf);
+}
+
+@font-face {
+    font-family: GatwickUltralight;
+    src: url(fonts/Gatwick-Ultralight.otf);
+}
+
+@font-face {
+    font-family: FSKoopmanVF;
+    src: url(fonts/FSKoopmanVF.ttf);
+}
+
+.project-container {
+    overflow: hidden;
+    font-family: FSKoopmanVF;
+}
+
+.project-container .featured-image {
+    height: calc(100vh - 180px);
+}
+
+.project-container h1 {
+    font-size: 200px;
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0px;
+    font-family: Goji-Heavy;
+    line-height: 1em;
+    position: relative;
+    animation: 20s linear infinite marquee-1;
+}
+
+.project-container h1:after {
+    content: attr(data-title);
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    transform: translate3d(100%, 0, 0);
+}
+
+@keyframes marquee-1 {
+    0% {
+        transform: translate3d(0%, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+#home-page-link {
+    position: absolute;
+    top: -150px;
+    left: 0px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.project-short-description {
+    padding: 20px 30px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.project-short-description p {
+    max-width: 80%;
+    font-size: 24px;
+}
+
+.project-short-description-line {
+    padding-top: 20px;
+    width: 50px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.project-year {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 400px;
+    font-family: FSKoopmanVF;
+}
+
+.wp-block-image {
+    margin: 0px;
+    font-size: 0px;
+}
+
+.wp-block-image img {
+    width: 100%;
+    height: auto;
+}
+
+figure.wp-block-image {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+#renderer {
+    opacity: 0;
+}
+
+#loader {
+    margin: auto;
+    z-index: 100;
+    text-align: center;
+    position: absolute;
+    top: 51vh;
+    height: 100vh;
+    width: 100%;
+}
+
+.load-image {
+    background-size: cover;
+    background-image: url(/wp-content/themes/base/images/loading-image.jpg);
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    margin-left: -8px;
+    margin-right: -8px;
+    transform: scale(1);
+    opacity: 0.7;
+}
+
+.fule-bg-type {
+    position: relative;
+    transform: scale(1.08);
+}
+
+#canvas {
+    scroll-snap-align: start;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    z-index: 0;
+}
+
+main.homepage {
+    margin-top: 100vh;
+}
+
+.fixed-project {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+#post-bottom-bar {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.page-id-854 #post-bottom-bar {
+    padding: 0px;
+}
+
+#post-bottom-bar a {
+    font-family: FSKoopmanVF;
+    display: flex;
+    align-items: center;
+}
+
+#post-bottom-bar svg {
+    margin-bottom: 0px;
+    margin-left: 30px;
+    width: 8px;
+}
+
+#post-bottom-bar .back svg {
+    transform: scaleX(-1);
+    margin-right: 20px;
+    margin-left: 0px;
+}
+
+@media all and (max-width: 768px) {
+    #post-bottom-bar {
+        font-size: 12px;
+    }
+    #post-bottom-bar svg {
+        margin-left: 10px;
+    }
+    #post-bottom-bar .back svg {
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.post-thumbnail {
+    padding-top: 220px;
+    text-align: center;
+}
+
+#social-links {
+    display: flex;
+}
+
+#social-links img {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.page-id-854 {
+    padding: 0px 40px;
+}
+
+h2 {
+    margin-bottom: 0px;
+}
+
+p {
+    margin-top: 0px;
+}
+
+.entry-content h1 {
+    font-size: 100px;
+    margin-bottom: 0px;
+    font-family: Goji-Heavy;
+}
+
+@media all and (max-width: 768px) {
+    .entry-content h1 {
+        font-size: 40px;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .entry-content h1 {
+        font-size: 34px;
+    }
+}
+
+.wp-block-video {
+    margin-bottom: 0px;
+    font-size: 0px;
+}
+
+.wp-block-gallery .blocks-gallery-item {
+    margin: 0px;
+}
+
+.wp-block-columns {
+    margin: 0px;
+}
+
+.wp-block-column:not(:first-child) {
+    margin-left: 0em;
+}
